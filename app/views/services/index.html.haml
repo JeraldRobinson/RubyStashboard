@@ -1,0 +1,24 @@
+- provide :title, "Your Services"
+#webservices.frame
+  %table#service-list
+    %table#service-list
+      %thead
+        %tr
+          %th Service
+          %td.today Today
+          -(1..4).each do |d|
+            %td.date= Date.today-d
+      %tbody#services-body
+        -@services.each do |service|
+          %tr{ :id => service.id}
+            %td.service=link_to service.name, service_events_path(service)
+            - (0..4).each do |d|
+              %td.status.highlight
+                -if ! service.status_at(Date.today-d).nil?
+                  =image_tag service.status_at(Date.today-d)
+                -else
+                  ?
+        %tr
+          %td.service=link_to "Create Service", new_service_path
+
+  = render 'services/legend'

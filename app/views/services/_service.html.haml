@@ -1,0 +1,8 @@
+-dates=get_past_days
+
+%tr{ :id => (service.id ? service.id : nil)}
+  %td.service=link_to service.name, service, method: :get
+  - (0..4).each do |x|
+    %td.status.highlight
+      HELLO
+

@@ -1,0 +1,7 @@
+%tr
+  %td= event.created_at.localtime.strftime("%B %d, %l:%M%p") 
+  %td.status.highlight= image_tag event.status.image
+  %td= event.message
+  
+  
+  

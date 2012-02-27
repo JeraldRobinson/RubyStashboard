@@ -1,0 +1,1001 @@
+html, body{
+  height: 100%;
+}
+
+body{
+  font:12px arial,helvetica,verdana,sans-serif;
+  background: rgb(247, 247, 247);
+}
+
+a {
+  color:#333;
+  text-decoration:none;
+}
+
+a:hover {
+  color:#666;
+}
+
+em {
+  font-style: italic;
+}
+
+#wrapper {
+  width: 900px; min-height: 100%;
+  height: auto !important; height: 100%;
+  margin: 0 auto -3em;
+}
+
+h1 {font-size: 32px; font-weight: bold;}
+h2 {font-size: 32px; font-weight: bold;}
+h3 {font-size: 24px; font-weight: bold;}
+h3.date-range {color: #999; margin-top: 20px}
+
+#header {height: 70px;}
+
+
+#header h1 {
+  margin: 15px; float: left; height: 40px; line-height: 40px;
+  font-size: 32px; font-weight: bold;
+  }
+#header h1 span {font-weight: normal;}
+#header h2 {margin: 15px 0; float: left; line-height: 67px;}
+#header .button-container { float: right; margin-top: 20px;}
+#logo { height: 40px; float: left; margin: 15px 0;}
+#header ul li {
+  list-style:none;
+  display:inline;
+  float: right;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 20px;
+  }
+
+#status { height: 200px; }
+#status h2 { font-size: 60px; color: #FFF; text-align: center; padding-top: 65px;text-shadow: 2px 2px 0px #000;}
+
+#content {
+  border: 1px solid rgb(228, 228, 228);
+  background: white;
+  padding: 20px;
+  position: relative;
+}
+
+
+.dialog { display: none; }
+
+#sidebar { float: right; margin: 20px; width: 250px; }
+
+#sidebar .panel { margin-bottom: 20px; }
+#sidebar .panel { margin-bottom:20px; }
+#sidebar .panel h3 { margin-bottom:7px; }
+#sidebar .panel ul li {
+  background:url(images/li.gif) no-repeat 0 3px;
+  color:#7F7F7F;line-height:1.2em;
+  border-top:1px solid #BBB;
+  padding:4px 0 4px 16px;
+}
+
+nav {
+  height: 50px;
+}
+
+nav ul {
+  background: #4476b5;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+nav li {
+    float: left;
+    height: 50px;
+    margin: 0 20px;
+    line-height: 50px;
+}
+
+nav li a {
+    display:block;
+    font-size:15px;
+    font-weight:bold;
+    text-decoration:none;
+    color: #F3FBEC;
+}
+
+nav li a:hover {
+    color: #F3FBEC;
+    text-decoration:underline;
+}
+
+nav .selected {
+    background:url("../images/sub-nav-selected-arrow.png") no-repeat scroll center bottom transparent;
+}
+
+/* DATA TABLES */
+.data {
+  width: 100%;
+  border-spacing:10;
+  font-size: 1.1em;
+  border-collapse: separate;
+  border-left:1px solid #E4E4E4;
+  border-top:1px solid #E4E4E4;
+}
+
+.data a {
+  text-decoration: underline;
+}
+
+.data thead {
+  background: #EEEEEE;
+}
+
+.data th {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid rgb(228, 228, 228);
+  border-right: 1px solid rgb(228, 228, 228);
+}
+
+.data tr {
+  font-size: 16px;
+}
+
+.data td {
+  padding: 10px;
+  border-bottom: 1px solid rgb(228, 228, 228);
+  border-right: 1px solid rgb(228, 228, 228);
+  vertical-align: middle;
+  height: 25px;
+}
+
+
+.data .time { width: 20%; }
+.data .today { background: rgb(228, 228, 228); }
+.data .highlight { background: rgb(247, 247, 247); }
+.data .status, .data .date, .data .today { text-align: center; }
+.data .action { width: 5px; }
+
+.data .status img {
+  max-width: 20px;
+}
+
+/* Front page table */
+
+#services {
+  border-left: none;
+  border-top: none;
+}
+
+#services th {
+  font-size: 20px;
+}
+
+#services th:first-child {
+  text-align: left;
+}
+
+#services thead {
+  background: none;
+}
+
+#events { margin-top: 20px; }
+#events .status { width: 10%; }
+#events .time { text-align:  center; }
+
+#submit {
+  background: rgb(228, 228, 228);
+  border: 1px solid #ccc;
+  margin: 20px 0px;
+  padding: 10px;
+  text-align: right;
+}
+
+#submit label {
+  float: left;
+  clear: left;
+  width: 55px;
+  padding: 10px;
+}
+
+#allgood {
+  border: 1px solid #86c440;
+  background: #daf1b8;
+  padding: 40px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+#allgood img, #allgood p {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* wordpress entries styling - main content column */
+#webservices {font-family: arial,helvetica,verdana,sans-serif;}
+#webservices h2 {font: 32px arial,helvetica,verdana,sans-serif; font-weight: bold;}
+#webservices p {font: 12px arial,helvetica,verdana,sans-serif; }
+#webservices table { width: 100%; border-spacing:10; font-size: 1.1em; }
+
+#webservices th {text-align: left;font-size: 20px;padding: 10px;border-bottom: 1px solid rgb(228, 228, 228);border-right: 1px solid rgb(228, 228, 228);}
+#webservices tr {font: 16px arial,helvetica,verdana,sans-serif;}
+#webservices td {padding: 10px;border-bottom: 1px solid rgb(228, 228, 228);border-right: 1px solid rgb(228, 228, 228); vertical-align: middle;}
+#webservices .today {background: rgb(228, 228, 228);}
+#webservices .highlight {background: rgb(247, 247, 247);}
+#webservices .status, #webservices .date, #webservices .today, .delete {text-align: center;}
+#webservices table a {text-decoration: underline;}
+
+#webservices .event-log {margin-top: 20px; border-collapse: separate; border-left:1px solid #E4E4E4;border-top:1px solid #E4E4E4;}
+#webservices .event-log thead {background:none repeat scroll 0 0 #EEEEEE;}
+#webservices .event-log th {font-size: 16px;text-align: center;}
+#webservices .event-log td {font-size: 14px;}
+#webservices .event-log td:first-child {text-align: center;}
+.status-header {width: 10%;}
+.time-header {width: 20%;}
+.delete-header {width: 8%;}
+
+#submit h3 {text-align: left;}
+
+#submit .update-message { float: left; width: 390px; height: 100px; padding: 3px;}
+#submit .update-status { float: left; margin: 10px 0px;}
+#submit .update-submit { clear: left; display: block; margin-left: auto; width: 150px;}
+
+#legend table tr, #legend table th {font-size: 12px}
+#legend h4 { color: #999; font-size: 18px; margin: 20px 0 5px 0;}
+#legend table { border: solid 2px rgb(228, 228, 228); width: auto; }
+#legend table tr td:first-child {width: 15px;}
+#legend td {padding: 5px}
+
+#footer {
+  width: 900px; 
+  margin: auto;
+  font-family: courier, monospace;
+  font-size: 10px;
+  a { color: -webkit-link; font-weight: bold; }
+  
+  }
+  
+#upper {text-transform: uppercase;}
+  
+#footer, #push {height: 3em;}
+
+#footer ul {padding: 10px 0px;}
+#footer ul li {display: inline-block;}
+#footer ul.left { float: left;}
+#footer ul.left li {margin-right: 7px}
+#footer ul.right { float: right;}
+#icons, #icons a{ color: -webkit-link; }
+
+td.status a{position: relative;}
+td.status a .information {position: absolute; top: 0px; left: 1px; z-index: 500;}
+
+.dialog label, .dialog textarea, .dialog input
+    { margin: 10px; clear: right;}
+
+.dialog label {display: block;}
+
+.dialog textarea { width: 400px; height: 75px;}
+
+.breadcrumb { font-weight: normal;}
+
+#add-note, #update-status { float: right; margin-left: 15px}
+#add-event-model {display: none;}
+
+#delete-service, #edit-service {margin-top: 20px}
+#delete-service {float: right}
+#delete-service-modal {display: none}
+
+#documentation {
+    font-size: 14px;
+}
+
+#documentation a { color: #4476B5; text-decoration: underline;}
+
+#documentation p { margin: 10px 0px; }
+#documentation h2 { margin: 20px 0 10px 0; }
+#documentation h3 { margin: 15px 0px 10px 0; font-size: 24px; color:#555555;}
+#documentation h4 { margin: 10px 0px; font-size: 22px; color: #4476B5;}
+#documentation h5 { margin: 10px 0px; font-size: 16px;}
+
+#documentation table {
+    font-size: 12px;
+}
+
+#documentation table td, #documentation table th {
+    padding: 10px;
+    border: 1px solid #555555;
+}
+
+#documentation table td {
+}
+
+#documentation table th {
+    background: #ccc;
+}
+
+#documentation table caption {font-style: italic; text-align: right;}
+
+#documentation blockquote, pre {
+    background: #F0F0F0;
+    margin: 10px 0;
+    padding: 10px;
+    width:auto;
+}
+
+#documentation blockquote p {
+    margin: 0;
+}
+
+#powered {
+    font-family: courier, monospace;
+    font-size: 10px;
+}
+
+#powered img {
+    width: 27px;
+}
+
+ul.admin .button {
+  float: right;
+  margin-left: 5px;
+}
+
+ul.admin li {
+  padding: 5px;
+  border-bottom: 1px solid #CCC;
+}
+
+ul.admin .name {
+  font-size: 20px;
+}
+
+ul.admin a  .name:hover {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+#create {
+  margin-top: 10px;
+}
+
+dl.form dd{
+  margin-bottom: 20px;
+}
+
+dl.form dt{
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+dl.form input[type=text] {
+  width: 500px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+dl.form textarea {
+  width: 500px;
+  padding: 5px;
+  font-size: 16px;
+  height: 100px;
+}
+
+form.delete p {
+  margin-bottom: 20px;
+  font-size: 16px
+}
+
+form.delete strong {
+  font-weight: bold;
+}
+
+form.admin h1{
+  margin-bottom: 20px;
+}
+
+.error {
+  display: none;
+  background: #EFA8AA;
+  width: 500px;
+  padding: 7px;
+  border: 1px solid #D62A11;
+  color: #D62A11;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+form.admin ul.images {
+  width: 550px;
+}
+
+form.admin ul.images li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px;
+}
+
+form.admin ul.images li img, form.admin ul.images li input{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+form.admin ul.images li img {
+  max-width: 20px;
+}
+
+#editbar {
+  float: right;
+}
+
+#notfound {
+  text-align: center;
+}
+
+#notfound img, #notfound section {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#notfound p {
+  font-size: 16px;
+}
+
+#notfound img {
+  width: 350px;
+}
+
+#setup h1, #setup p {
+  margin-bottom: 20px;
+}
+
+#setup p {
+  font-size: 16px;
+}
+
+.sym {
+  max-width: 20px;
+}
+
+#migrations li{
+  font-size: 22px;
+}
+
+#notice {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #EEE;
+}
+
+.admin h1 {
+  margin-bottom: 10px;
+}
+
+#oauth img, #oauth div{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#oauth img {
+  width: 200px;
+}
+
+#oauth div {
+  margin-left: 30px;
+}
+
+#oauth p {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ffa49c;
+  border-radius: 10px;
+  border: 1px solid red;
+  -moz-border-radius: 10px;
+}
+
+#oauth p a {
+  margin-left: 30px;
+}
+
+#oauth table tr td{
+  padding: 6px;
+}
+
+#oauth table tr td{
+  font-family: monospace;
+}
+
+#oauth table tr td:first-child{
+  font:14px arial,helvetica,verdana,sans-serif;
+  text-align: right;
+  font-weight: bold;
+}
+
+
+
+
+
+/* ------------------------------------------
+CSS3 GITHUB BUTTONS (Nicolas Gallagher)
+Licensed under Unlicense
+http://github.com/necolas/css3-github-buttons
+------------------------------------------ */
+
+
+/* ------------------------------------------------------------------------------------------------------------- BUTTON */
+
+.button {
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #d4d4d4;
+    margin: 0;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #fff;
+    font:11px/normal sans-serif;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    background-color: #ececec;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+    background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+    background-image: -o-linear-gradient(#f4f4f4, #ececec);
+    background-image: linear-gradient(#f4f4f4, #ececec);
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    -o-background-clip: padding-box;
+    /*background-clip: padding-box;*/ /* commented out due to Opera 11.10 bug */
+    -webkit-border-radius: 0.2em;
+    -moz-border-radius: 0.2em;
+    border-radius: 0.2em;
+    /* IE hacks */
+    zoom: 1;
+    *display: inline;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+    border-color: #3072b3;
+    border-bottom-color: #2a65a0;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    color: #fff;
+    background-color: #3072b3;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
+    background-image: -moz-linear-gradient(#599bdc, #3072b3);
+    background-image: -o-linear-gradient(#599bdc, #3072b3);
+    background-image: linear-gradient(#599bdc, #3072b3);
+}
+
+.button:active,
+.button.active {
+    border-color: #2a65a0;
+    border-bottom-color: #3884CF;
+    color: #fff;
+    background-color: #3072b3;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3072b3), to(#599bdc));
+    background-image: -moz-linear-gradient(#3072b3, #599bdc);
+    background-image: -o-linear-gradient(#3072b3, #599bdc);
+    background-image: linear-gradient(#3072b3, #599bdc);
+}
+
+/* overrides extra padding on button elements in Firefox */
+.button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+/* ............................................................................................................. Icons */
+
+.button.icon:before {
+    content: "";
+    position: relative;
+    top: 1px;
+    float:left;
+    width: 12px;
+    height: 12px;
+    margin: 0 0.75em 0 -0.25em;
+    background: url(gh-icons.png) 0 99px no-repeat;
+}
+
+.button.arrowup.icon:before { background-position: 0 0; }
+.button.arrowup.icon:hover:before,
+.button.arrowup.icon:focus:before,
+.button.arrowup.icon:active:before { background-position: -12px 0; }
+
+.button.arrowdown.icon:before { background-position: 0 -12px; }
+.button.arrowdown.icon:hover:before,
+.button.arrowdown.icon:focus:before,
+.button.arrowdown.icon:active:before { background-position: -12px -12px; }
+
+.button.arrowleft.icon:before { background-position: 0 -24px; }
+.button.arrowleft.icon:hover:before,
+.button.arrowleft.icon:focus:before,
+.button.arrowleft.icon:active:before { background-position: -12px -24px; }
+
+.button.arrowright.icon:before { float:right; margin: 0 -0.25em 0 0.5em; background-position: 0 -36px; }
+.button.arrowright.icon:hover:before,
+.button.arrowright.icon:focus:before,
+.button.arrowright.icon:active:before { background-position: -12px -36px; }
+
+.button.approve.icon:before { background-position: 0 -48px; }
+.button.approve.icon:hover:before,
+.button.approve.icon:focus:before,
+.button.approve.icon:active:before { background-position: -12px -48px; }
+
+.button.add.icon:before { background-position: 0 -288px; }
+.button.add.icon:hover:before,
+.button.add.icon:focus:before,
+.button.add.icon:active:before { background-position: -12px -288px; }
+
+.button.remove.icon:before { background-position: 0 -60px; }
+.button.remove.icon:hover:before,
+.button.remove.icon:focus:before,
+.button.remove.icon:active:before { background-position: -12px -60px; }
+
+.button.log.icon:before { background-position: 0 -72px; }
+.button.log.icon:hover:before,
+.button.log.icon:focus:before,
+.button.log.icon:active:before { background-position: -12px -72px; }
+
+.button.calendar.icon:before { background-position: 0 -84px; }
+.button.calendar.icon:hover:before,
+.button.calendar.icon:focus:before,
+.button.calendar.icon:active:before { background-position: -12px -84px; }
+
+.button.chat.icon:before { background-position: 0 -96px; }
+.button.chat.icon:hover:before,
+.button.chat.icon:focus:before,
+.button.chat.icon:active:before { background-position: -12px -96px; }
+
+.button.clock.icon:before { background-position: 0 -108px; }
+.button.clock.icon:hover:before,
+.button.clock.icon:focus:before,
+.button.clock.icon:active:before { background-position: -12px -108px; }
+
+.button.settings.icon:before { background-position: 0 -120px; }
+.button.settings.icon:hover:before,
+.button.settings.icon:focus:before,
+.button.settings.icon:active:before { background-position: -12px -120px; }
+
+.button.comment.icon:before { background-position: 0 -132px; }
+.button.comment.icon:hover:before,
+.button.comment.icon:focus:before,
+.button.comment.icon:active:before { background-position: -12px -132px; }
+
+.button.fork.icon:before { background-position: 0 -144px; }
+.button.fork.icon:hover:before,
+.button.fork.icon:focus:before,
+.button.fork.icon:active:before { background-position: -12px -144px; }
+
+.button.like.icon:before { background-position: 0 -156px; }
+.button.like.icon:hover:before,
+.button.like.icon:focus:before,
+.button.like.icon:active:before { background-position: -12px -156px; }
+
+.button.favorite.icon:before { background-position: 0 -348px; }
+.button.favorite.icon:hover:before,
+.button.favorite.icon:focus:before,
+.button.favorite.icon:active:before { background-position: -12px -348px; }
+
+.button.home.icon:before { background-position: 0 -168px; }
+.button.home.icon:hover:before,
+.button.home.icon:focus:before,
+.button.home.icon:active:before { background-position: -12px -168px; }
+
+.button.key.icon:before { background-position: 0 -180px; }
+.button.key.icon:hover:before,
+.button.key.icon:focus:before,
+.button.key.icon:active:before { background-position: -12px -180px; }
+
+.button.lock.icon:before { background-position: 0 -192px; }
+.button.lock.icon:hover:before,
+.button.lock.icon:focus:before,
+.button.lock.icon:active:before { background-position: -12px -192px; }
+
+.button.unlock.icon:before { background-position: 0 -204px; }
+.button.unlock.icon:hover:before,
+.button.unlock.icon:focus:before,
+.button.unlock.icon:active:before { background-position: -12px -204px; }
+
+.button.loop.icon:before { background-position: 0 -216px; }
+.button.loop.icon:hover:before,
+.button.loop.icon:focus:before,
+.button.loop.icon:active:before { background-position: -12px -216px; }
+
+.button.search.icon:before { background-position: 0 -228px; }
+.button.search.icon:hover:before,
+.button.search.icon:focus:before,
+.button.search.icon:active:before { background-position: -12px -228px; }
+
+.button.mail.icon:before { background-position: 0 -240px; }
+.button.mail.icon:hover:before,
+.button.mail.icon:focus:before,
+.button.mail.icon:active:before { background-position: -12px -240px; }
+
+.button.move.icon:before { background-position: 0 -252px; }
+.button.move.icon:hover:before,
+.button.move.icon:focus:before,
+.button.move.icon:active:before { background-position: -12px -252px; }
+
+.button.edit.icon:before { background-position: 0 -264px; }
+.button.edit.icon:hover:before,
+.button.edit.icon:focus:before,
+.button.edit.icon:active:before { background-position: -12px -264px; }
+
+.button.pin.icon:before { background-position: 0 -276px; }
+.button.pin.icon:hover:before,
+.button.pin.icon:focus:before,
+.button.pin.icon:active:before { background-position: -12px -276px; }
+
+.button.reload.icon:before { background-position: 0 -300px; }
+.button.reload.icon:hover:before,
+.button.reload.icon:focus:before,
+.button.reload.icon:active:before { background-position: -12px -300px; }
+
+.button.rss.icon:before { background-position: 0 -312px; }
+.button.rss.icon:hover:before,
+.button.rss.icon:focus:before,
+.button.rss.icon:active:before { background-position: -12px -312px; }
+
+.button.tag.icon:before { background-position: 0 -324px; }
+.button.tag.icon:hover:before,
+.button.tag.icon:focus:before,
+.button.tag.icon:active:before { background-position: -12px -324px; }
+
+.button.trash.icon:before { background-position: 0 -336px; }
+.button.trash.icon:hover:before,
+.button.trash.icon:focus:before,
+.button.trash.icon:active:before { background-position: -12px -336px; }
+
+.button.user.icon:before { background-position: 0 -360px; }
+.button.user.icon:hover:before,
+.button.user.icon:focus:before,
+.button.user.icon:active:before { background-position: -12px -360px; }
+
+
+/* ------------------------------------------------------------------------------------------------------------- BUTTON EXTENSIONS */
+
+/* ............................................................................................................. Primary */
+
+.button.primary {
+    font-weight: bold;
+}
+
+/* ............................................................................................................. Danger */
+
+.button.danger {
+    color: #900;
+}
+
+.button.danger:hover,
+.button.danger:focus,
+.button.danger:active {
+    border-color: #b53f3a;
+    border-bottom-color: #a0302a;
+    color: #fff;
+    background-color: #dc5f59;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dc5f59), to(#b33630));
+    background-image: -moz-linear-gradient(#dc5f59, #b33630);
+    background-image: -o-linear-gradient(#dc5f59, #b33630);
+    background-image: linear-gradient(#dc5f59, #b33630);
+}
+
+.button.danger:active,
+.button.danger.active {
+    border-color: #a0302a;
+    border-bottom-color: #bf4843;
+    background-color: #b33630;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#b33630), to(#dc5f59));
+    background-image: -moz-linear-gradient(#b33630, #dc5f59);
+    background-image: -o-linear-gradient(#b33630, #dc5f59);
+    background-image: linear-gradient(#b33630, #dc5f59);
+}
+
+/* ............................................................................................................. Pill */
+
+.button.pill {
+    -webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+}
+
+/* ............................................................................................................. Big */
+
+.button.big {
+    font-size: 14px;
+}
+
+.button.big.icon:before { top: 0; }
+
+
+/* ------------------------------------------------------------------------------------------------------------- BUTTON GROUPS */
+
+/* ............................................................................................................. Standard */
+
+.button-group {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* IE hacks */
+    zoom: 1;
+    *display: inline;
+}
+
+.button + .button,
+.button + .button-group,
+.button-group + .button,
+.button-group + .button-group {
+    margin-left: 15px;
+}
+
+.button-group li {
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+.button-group .button {
+    float: left;
+    margin-left: -1px;
+}
+
+.button-group > .button:not(:first-child):not(:last-child),
+.button-group li:not(:first-child):not(:last-child) .button {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.button-group > .button:first-child,
+.button-group li:first-child .button {
+    margin-left: 0;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.button-group > .button:last-child,
+.button-group li:last-child > .button {
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-bottomleft: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* ............................................................................................................. Minor */
+
+.button-group.minor-group .button {
+    border: 1px solid #d4d4d4;
+    text-shadow: none;
+    background-image: none;
+    background-color: #fff;
+}
+
+.button-group.minor-group .button:hover,
+.button-group.minor-group .button:focus,
+.button-group.minor-group .button:active {
+    background-color: #599bdc;
+}
+
+.button-group.minor-group .button:active,
+.button-group.minor-group .button.active {
+    background-color: #3072b3;
+}
+
+.button-group.minor-group .button.icon:before {
+    opacity: 0.8;
+}
+
+/* ------------------------------------------------------------------------------------------------------------- BUTTON CONTAINER */
+/* For mixing buttons and button groups, e.g., in a navigation bar */
+
+.button-container .button,
+.button-container .button-group {
+    vertical-align: top;
+}
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+
+
+table {
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  -webkit-border-horizontal-spacing: 2px;
+  -webkit-border-vertical-spacing: 2px;
+  border-color: gray;
+  border-top-color: gray;
+  border-right-color: gray;
+  border-bottom-color: gray;
+  border-left-color: gray;
+}
+
+th {
+  font-weight: bold;
+}
+
+td, th {
+  display: table-cell;
+  vertical-align: inherit;
+}
+
+#services th:first-child {
+  text-align: left;
+}
+
+#services th {
+  font-size: 20px;
+}
+
+
+div {
+display: block;
+}
+
+
+#add-service { margin-top: 20px;}
+#add-status { margin-top: 20px;}
+
+
+
+
+

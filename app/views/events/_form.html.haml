@@ -1,0 +1,17 @@
+%h2= "Create Event for #{@service.name}"
+
+%br/
+  
+= form_for(@event, :url => service_events_path(@service)) do |f|
+  = render 'shared/error_messages', :object => f.object
+  .field
+    = f.label :message
+    %br/
+    = f.text_field :message
+
+    =collection_select(:event, :status_id, Status.all, :id, :name)
+    
+    =f.hidden_field :service_id, :input_html => { :value => @service.id }
+    
+  .actions
+    = f.submit "Create"

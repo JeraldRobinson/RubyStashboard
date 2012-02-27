@@ -1,0 +1,20 @@
+#legend.legend
+  %h4 Legend
+  %table
+    %tbody#legend-body
+      %tr
+        %td.icon
+          =icon_for(:up)
+        %td.description The service is up
+      %tr  
+        %td.icon
+          =icon_for(:warning)
+        %td.description The service is experiencing intermittent problems
+      %tr
+        %td.icon
+          =icon_for(:maintenance)
+        %td.description Doing scheduled maintenance
+      %tr  
+        %td.icon
+          =icon_for(:down)
+        %td.description The service is currently down

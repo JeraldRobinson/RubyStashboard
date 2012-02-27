@@ -1,0 +1,22 @@
+- provide :title, "Events for this service"
+
+#webservices.frame
+  %h2= "#{Date.today}"
+  %h2
+    %span= @service.name
+  
+  %p#serviceDescription Powered by Stashboard
+      
+  %table.event-log{ :cellpadding => "10"}
+    %thead
+      %tr
+        %th.time-header Time
+        %th.status-header Status
+        %th Message
+    
+    %tbody#events-tbody
+      -if ! @events.nil?
+        =render @events
+    
+        %tr
+          %td.service=link_to "Create Event", new_service_event_path

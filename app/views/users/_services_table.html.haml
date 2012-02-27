@@ -1,0 +1,24 @@
+%table#service-list
+  %thead
+    %tr
+      %th Service
+      -get_past_days.each do |d|
+        %td.today=d.to_date
+
+
+  %tbody#services-body
+    -if current_user.services.any?
+      =render @services
+    -else
+      %tr
+        %td.service=link_to "Create Service", "#"
+      
+#legend.legend
+  %h4 Legend
+  %table
+    %tbody#legend-body
+      %tr
+        %td.icon
+          %img{:alt => "Up", :src => "http://status.mongohq.com/images/status/tick-circle.png"}/
+        %td.description The service is up
+

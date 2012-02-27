@@ -10,15 +10,6 @@ module ApplicationHelper
     end
   end
   
-  def get_past_days(num=4)
-    today=DateTime.now
-    dates=Array.new
-    (0..num).each do |n|
-      dates.push(today-n)
-    end
-    return dates
-  end
-  
   def powered_by
     image_tag "poweredbystash.png"
   end

@@ -1,7 +1,3 @@
-%h2= "Create Event for #{@service.name}"
-
-%br/
-  
 = form_for(@event, :url => service_events_path(@service)) do |f|
   = render 'shared/error_messages', :object => f.object
   .field

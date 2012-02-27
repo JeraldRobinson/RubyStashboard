@@ -19,5 +19,8 @@
     = f.label :password_confirmation, "Confirmation"
     %br/
     = f.password_field :password_confirmation
-  .actions
-    = f.submit "Sign up"
+  .signup-link
+    = f.submit "Sign up", :class => "button"
+    %br/
+    %br/
+    Already have an account? #{link_to "Sign in", signin_path}

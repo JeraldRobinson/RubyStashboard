@@ -11,7 +11,8 @@
     = f.label :password
     %br/
     = f.password_field :password
-    .actions
-      = f.submit "Sign in"
-      %p
-        New user? #{link_to "Sign up now!", signup_path}
+    .signup-link
+      = f.submit "Sign in", :class => "button"
+      %br/
+      %br/
+      New user? #{link_to "Sign up now!", signup_path}

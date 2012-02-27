@@ -1,12 +1,9 @@
-Inspired by Twilio's Stashboard.org
+##Inspired by
 =================
-Built in conjunction with General Assembly and Pivotal Labs 
+###[Twilio](http://www.twilio.com/)'s [Stashboard.org](http://www.stashboard.org/) and
 
-Brooklyn, NY Feb 2012
+###Built in conjunction with [General Assemb.ly](http://wp.generalassemb.ly/) and [Pivotal Labs](http://pivotallabs.com/) 
 
 
-Links
-=====
-
-* 
+######Brooklyn, NY Feb 2012
 

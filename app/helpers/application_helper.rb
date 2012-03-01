@@ -1,5 +1,5 @@
 module ApplicationHelper
-
+  
   # Returns the full title on a per-page basis.
   def full_title(page_title)
     base_title = "Stashboard"
@@ -11,24 +11,20 @@ module ApplicationHelper
   end
   
   def powered_by
-    image_tag "poweredbystash.png"
+    return image_tag "poweredbystash.png"
   end
   
   def logo
-    image_tag "logo.png", id: "logo"
+    return image_tag "logo.png", id: "logo"
   end
   
   def icon_for(status)
-    
-    icon_for = {
-                   up: "icons/fugue/tick-circle.png",
-                   warning: "icons/fugue/exclamation.png",
-                   maintenance: "icons/fugue/clock.png",
-                   down: "icons/fugue/cross-circle.png" }
+    icon_for = { up: "icons/fugue/tick-circle.png",
+                 warning: "icons/fugue/exclamation.png",
+                 maintenance: "icons/fugue/clock.png",
+                 down: "icons/fugue/cross-circle.png" }
     
     return image_tag icon_for[status]
-  
   end
 
-  
 end

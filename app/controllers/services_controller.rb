@@ -38,13 +38,4 @@ class ServicesController < ApplicationController
       render file: "public/404.html", status: 404
     end
   end
-  
-  def get_all_events
-    if @service.events.any?
-      @events=Service.find(:all, :order => "id desc").reverse
-    else
-      @events=[]
-    end
-  end
-  
 end

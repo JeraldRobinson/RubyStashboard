@@ -30,11 +30,14 @@ class EventsController < ApplicationController
   end
   
   def destroy
-    @event = Event.find(params[:id])
-    @event.destroy
-    redirect_to service_events_path
+      @event = Event.find(params[:id] )
+      redirect_to(@event) and return if params[:cancel]
+      @event.destroy
+      respond_to do |format|
+          format.html { redirect_to service_events_path }
+          format.json { render :json => @event }
+      end
   end
-  
   
   def get_service
     begin
@@ -44,13 +47,10 @@ class EventsController < ApplicationController
     end
   end
   
-  
   private
 
   def correct_user
     @services = current_user.services.find_by_id(params[:service_id])
     redirect_to services_path unless ! @services.nil? or current_user.admin?
   end
-  
-  
 end

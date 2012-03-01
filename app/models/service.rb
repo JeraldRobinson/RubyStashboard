@@ -24,11 +24,10 @@ class Service < ActiveRecord::Base
   
   #use default scope to fetch services in reverse chronological order
   default_scope order: 'services.created_at DESC'
-  
+
   def status_at(date, days_before=1)
     event=self.events.where("created_at <= ? AND created_at > ?", 
                             (date+1).to_time.utc, (date-days_before+1).to_time.utc).first
-    
     if event.nil? and days_before<=5
       return self.status_at(date, days_before+1)
     end

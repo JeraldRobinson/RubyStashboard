@@ -5,8 +5,8 @@ Sb::Application.routes.draw do
   resources :users
   
   resources :services do
-     resources :events
-   end
+    resources :events
+  end
   
   match '/signup',   to: 'users#new'
   match '/signin',   to: 'sessions#new'

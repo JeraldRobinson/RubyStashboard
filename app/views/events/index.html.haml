@@ -17,23 +17,14 @@
     %tbody#events-tbody
       -if ! @events.nil?
         =render @events
-    
         %tr
           %td.service=link_to "Create Event", new_service_event_path
        
 :javascript
-  $("td.delete a").click(function(evt) { 
-    var id = $(evt.target).parent().parent().attr('id');
-    console.log(id);
-    $.ajax({
-      type: "DELETE",
-      url: window.location.pathname+"/"+id+".json",
-      success: function(){
-        $(evt.target).parent().parent().fadeOut(600, function() { 
-          $(evt.target).parent().parent().remove();
-        })
-      },
-      error: function() { console.log("error");}
+  $(function() { 
+    $("td.delete a").bind("ajax:success", function($evt) {
+      $($evt.target).parent().parent().fadeOut(1000, function() { 
+        $($evt.target).parent().parent().remove();
+      })
     });
-    return false;
   });

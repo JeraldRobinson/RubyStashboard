@@ -34,7 +34,6 @@ class EventsController < ApplicationController
       redirect_to(@event) and return if params[:cancel]
       @event.destroy
       respond_to do |format|
-          format.html { redirect_to service_events_path }
           format.json { render :json => @event }
       end
   end

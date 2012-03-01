@@ -3,5 +3,4 @@
   %td.status.highlight= image_tag event.status.image
   %td= event.message
   %td.delete 
-    =link_to "X"
-    
+    =link_to "X", {controller:'events', action: 'destroy', id: event}, method: :delete, confirm: "You sure?", remote: true

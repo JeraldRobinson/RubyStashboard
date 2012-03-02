@@ -43,7 +43,7 @@ describe "Event pages" do
       end
     end
 
-    describe "with valid information" do
+    describe "create with valid info" do
       before do
         fill_in "Message", with: "Foo Bar"
         select "up",       from: "event_status_id"
@@ -51,10 +51,16 @@ describe "Event pages" do
       
       it "should create an event in the DB" do          
         expect { click_button "Create" }.should change(Event, :count).by(1)
-      end      
+      end
+      
+      it "should remove event from the DB" do
+        click_button "Create"
+        expect { click_link "X" }.should change(Event, :count).by(-1)
+      end
+          
     end
     
-    describe "after saving an event" do
+    describe "success message after saving" do
       message="Testing Event Creation"
       before do
         fill_in "Message",      with: message
@@ -64,6 +70,16 @@ describe "Event pages" do
       
       it { should have_selector('div.flash.success') }
       it { should have_content(message) }
-    end    
+      it { should have_selector("table") }
+    
+      describe "delete event from table", :js => true do
+                
+        it "should remove the event from the UI" do
+          click_link "X"
+          page.driver.browser.switch_to.alert.accept
+          page.should_not have_content(message)
+        end
+      end
+    end
   end
 end

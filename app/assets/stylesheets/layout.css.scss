@@ -3,9 +3,12 @@ html, body{
 }
 
 body{
-  font:12px arial,helvetica,verdana,sans-serif;
+  font:12px 'Yanone Kaffeesatz', arial, helvetica,verdana,sans-serif;
   background: rgb(247, 247, 247);
 }
+
+
+h1#title { font-family: 'Yanone Kaffeesatz', arial, serif; }
 
 a {
   color:#333;
@@ -63,6 +66,8 @@ h3.date-range {color: #999; margin-top: 20px}
   position: relative;
 }
 
+#content h1 {font: 24px arial,helvetica,verdana,sans-serif; font-weight: bold;}
+.field {font: 14px arial,helvetica,verdana,sans-serif; font-weight: bold;}
 
 .dialog { display: none; }
 
@@ -257,7 +262,6 @@ nav .selected {
   font-family: courier, monospace;
   font-size: 10px;
   a { color: -webkit-link; font-weight: bold; }
-  
   }
   
 #upper {text-transform: uppercase;}
@@ -955,10 +959,16 @@ display: block;
 
 #add-service { margin-top: 20px;}
 #add-status { margin-top: 20px;}
-.signup-link { font:12px arial,helvetica,verdana,sans-serif; 
-                a {text-decoration: underline;}
-               padding-top: 15px;}
+.signup-link { font:12px 'Yanone Kaffeesatz', arial, helvetica,verdana,sans-serif; padding-top: 15px; }
+.signup-link a {font:12px 'Yanone Kaffeesatz', arial, helvetica,verdana,sans-serif; padding-top: 15px;
+                text-decoration: underline;}
 
 
+#about a { text-decoration: underline; color: #2e8be9; font-family: arial,helvetica,verdana,sans-serif; }
 
-
+section#about { 
+  h1 { background: url("images/stash-crazy.png") no-repeat;
+       background-image: url("http://www.stashboard.org/images/stash-crazy.png"); 
+       font-size: 48px; padding: 10px 10px 20px 70px; 
+       font-family: arial,helvetica,verdana,sans-serif;}
+  p { font-size: 22px;line-height: 36px; margin-bottom: 15px; font-family: arial,helvetica,verdana,sans-serif;}}

@@ -17,7 +17,6 @@ Spork.prefork do
     config.color_enabled = true
     config.tty = true
     config.formatter = :documentation # :progress, :html, :textmate
-    
     config.infer_base_class_for_anonymous_controllers = false
   end
 end

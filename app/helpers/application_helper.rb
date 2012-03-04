@@ -26,5 +26,9 @@ module ApplicationHelper
     
     return image_tag icon_for[status]
   end
+  
+  def about_image
+    image_tag "stash-crazy.png", alt: "About Us Mustache Man"
+  end
 
 end
